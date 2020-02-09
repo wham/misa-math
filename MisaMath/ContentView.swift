@@ -9,8 +9,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var result = ""
+    
     var body: some View {
-        Text("Hello, World!")
+        HStack() {
+            Text("23")
+            Text("+")
+            Text("10")
+            Text("=")
+            TextField("??", text: $result)
+                .keyboardType(/*@START_MENU_TOKEN@*/.numberPad/*@END_MENU_TOKEN@*/)
+        }
+        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
     }
 }
 
