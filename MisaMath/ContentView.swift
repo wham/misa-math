@@ -10,27 +10,43 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var leftOperand = 23
-    @State var rightOperand = 10
+    @EnvironmentObject var mathFormula: MathFormula
     @State var result = ""
     
     var body: some View {
-        HStack() {
-            Text(String(leftOperand))
-            Text("+")
-            Text(String(rightOperand))
-            Text("=")
-            TextField("??", text: $result)
-                .keyboardType(/*@START_MENU_TOKEN@*/.numberPad/*@END_MENU_TOKEN@*/)
-                .foregroundColor(leftOperand + rightOperand == Int(result) ? .green : .red)
+        let binding = Binding<String>(get: {
+            self.result
+        }, set: {
+            self.result = $0
             
+            if (Int(self.result) == self.mathFormula.expectedResult) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    // Put your code which should be executed with a delay here
+                    self.mathFormula.generate()
+                    self.result = ""
+                }
+            }
+        })
+        
+        return VStack(alignment: .center) {
+            HStack() {
+                Text(String(mathFormula.leftOperand))
+                Text("+")
+                Text(String(mathFormula.rightOperand))
+                Text("=")
+                TextField("??", text: binding)
+                    .keyboardType(/*@START_MENU_TOKEN@*/.numberPad/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(mathFormula.expectedResult == Int(result) ? .green : .red)
+                
+            }
+            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
         }
-        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(MathFormula())
     }
 }

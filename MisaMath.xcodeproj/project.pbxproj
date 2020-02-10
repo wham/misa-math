@@ -15,6 +15,7 @@
 		E96A323D23EFC13100701303 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E96A323B23EFC13100701303 /* LaunchScreen.storyboard */; };
 		E96A324823EFC13100701303 /* MisaMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A324723EFC13100701303 /* MisaMathTests.swift */; };
 		E96A325323EFC13100701303 /* MisaMathUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A325223EFC13100701303 /* MisaMathUITests.swift */; };
+		E96A326323F119A700701303 /* MathFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A326223F119A700701303 /* MathFormula.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E96A324E23EFC13100701303 /* MisaMathUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MisaMathUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96A325223EFC13100701303 /* MisaMathUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisaMathUITests.swift; sourceTree = "<group>"; };
 		E96A325423EFC13100701303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E96A326223F119A700701303 /* MathFormula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathFormula.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				E96A323B23EFC13100701303 /* LaunchScreen.storyboard */,
 				E96A323E23EFC13100701303 /* Info.plist */,
 				E96A323823EFC13100701303 /* Preview Content */,
+				E96A326223F119A700701303 /* MathFormula.swift */,
 			);
 			path = MisaMath;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E96A326323F119A700701303 /* MathFormula.swift in Sources */,
 				E96A323123EFC13000701303 /* AppDelegate.swift in Sources */,
 				E96A323323EFC13000701303 /* SceneDelegate.swift in Sources */,
 				E96A323523EFC13000701303 /* ContentView.swift in Sources */,
