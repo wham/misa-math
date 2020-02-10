@@ -9,16 +9,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var leftOperand = 23
+    @State var rightOperand = 10
     @State var result = ""
     
     var body: some View {
         HStack() {
-            Text("23")
+            Text(String(leftOperand))
             Text("+")
-            Text("10")
+            Text(String(rightOperand))
             Text("=")
             TextField("??", text: $result)
                 .keyboardType(/*@START_MENU_TOKEN@*/.numberPad/*@END_MENU_TOKEN@*/)
+                .foregroundColor(leftOperand + rightOperand == Int(result) ? .green : .red)
+            
         }
         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
     }
