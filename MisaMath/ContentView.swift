@@ -28,19 +28,18 @@ struct ContentView: View {
             }
         })
         
-        return VStack(alignment: .center) {
-            HStack() {
-                Text(String(mathFormula.leftOperand))
-                Text("+")
-                Text(String(mathFormula.rightOperand))
-                Text("=")
-                TextField("??", text: binding)
-                    .keyboardType(/*@START_MENU_TOKEN@*/.numberPad/*@END_MENU_TOKEN@*/)
-                    .foregroundColor(mathFormula.expectedResult == Int(result) ? .green : .red)
-                
-            }
-            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+        return HStack() {
+            Text(String(mathFormula.leftOperand))
+            Text("+")
+            Text(String(mathFormula.rightOperand))
+            Text("=")
+            TextField("??", text: binding)
+                .keyboardType(/*@START_MENU_TOKEN@*/.numberPad/*@END_MENU_TOKEN@*/)
+                .frame(width: 60)
+                .foregroundColor(mathFormula.expectedResult == Int(result) ? .green : .red)
+            
         }
+        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
     }
 }
 
