@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E934777F23FB93FB00876D1E /* MathFormulaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934777E23FB93FB00876D1E /* MathFormulaView.swift */; };
 		E96A323123EFC13000701303 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A323023EFC13000701303 /* AppDelegate.swift */; };
 		E96A323323EFC13000701303 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A323223EFC13000701303 /* SceneDelegate.swift */; };
 		E96A323523EFC13000701303 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A323423EFC13000701303 /* ContentView.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E934777E23FB93FB00876D1E /* MathFormulaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathFormulaView.swift; sourceTree = "<group>"; };
 		E96A322D23EFC13000701303 /* MisaMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MisaMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96A323023EFC13000701303 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E96A323223EFC13000701303 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				E96A323E23EFC13100701303 /* Info.plist */,
 				E96A323823EFC13100701303 /* Preview Content */,
 				E96A326223F119A700701303 /* MathFormula.swift */,
+				E934777E23FB93FB00876D1E /* MathFormulaView.swift */,
 			);
 			path = MisaMath;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E934777F23FB93FB00876D1E /* MathFormulaView.swift in Sources */,
 				E96A326323F119A700701303 /* MathFormula.swift in Sources */,
 				E96A323123EFC13000701303 /* AppDelegate.swift in Sources */,
 				E96A323323EFC13000701303 /* SceneDelegate.swift in Sources */,
