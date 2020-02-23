@@ -9,7 +9,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var plus = true;
+    @State private var addition = true;
+    @State private var subtraction = true;
+    @State private var multiplication = true;
+    @State private var division = true;
     
     var body: some View {
         NavigationView {
@@ -17,20 +20,19 @@ struct ContentView: View {
                 Image("Logo")
                     .frame(width: 200, height: 200)
                 List {
-                    Toggle(isOn: $plus) {
-                        Text("+")
+                    Toggle(isOn: $addition) {
+                        Text("+ Addition")
                     }
-                    Toggle(isOn: $plus) {
-                        Text("-")
+                    Toggle(isOn: $subtraction) {
+                        Text("- Subtraction")
                     }
-                    Toggle(isOn: $plus) {
-                        Text("*")
+                    Toggle(isOn: $multiplication) {
+                        Text("× Multiplication")
                     }
-                    Toggle(isOn: $plus) {
-                        Text("/")
+                    Toggle(isOn: $division) {
+                        Text("÷ Division")
                     }
-                }
-                
+                }.listStyle(GroupedListStyle())
                 NavigationLink(destination: MathFormulaView()) {
                     Text("Start")
                 }.buttonStyle(DefaultButtonStyle())
