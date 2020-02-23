@@ -2,20 +2,71 @@ import SwiftUI
 import Combine
 
 final class MathFormula: ObservableObject  {
+    var addition: Bool
+    var subtraction: Bool
+    var multiplication: Bool
+    var division: Bool
+    
     @Published var leftOperand = 23
+    @Published var operation = "+"
     @Published var rightOperand = 10
     var expectedResult: Int {
         get {
-            return leftOperand + rightOperand
+            switch operation {
+            case "-":
+                return leftOperand - rightOperand
+            case "×":
+                return leftOperand * rightOperand
+            case "÷":
+                return leftOperand / rightOperand
+            default:
+                return leftOperand + rightOperand
+            }
         }
     }
     
-    init() {
+    init(addition: Bool, subtraction: Bool, multiplication: Bool, division: Bool) {
+        self.addition = addition
+        self.subtraction = subtraction
+        self.multiplication = multiplication
+        self.division = division
         generate()
     }
     
     func generate() {
-        leftOperand = Int.random(in: 1..<50)
-        rightOperand = Int.random(in: 1..<50)
+        var operations: [String] = []
+        
+        if (addition) {
+            operations.append("+")
+        }
+        
+        if (subtraction) {
+            operations.append("-")
+        }
+        
+        if (multiplication) {
+            operations.append("×")
+        }
+        
+        if (division) {
+            operations.append("÷")
+        }
+        
+        operation = operations.count > 0 ? operations.randomElement()! : "+"
+        
+        switch operation {
+        case "-":
+            leftOperand = Int.random(in: 0...100)
+            rightOperand = Int.random(in: 0...leftOperand)
+        case "×":
+            leftOperand = Int.random(in: 0...10)
+            rightOperand = Int.random(in: 0...10)
+        case "÷":
+            rightOperand = Int.random(in: 0...10)
+            leftOperand = rightOperand * Int.random(in: 0...10)
+        default:
+            leftOperand = Int.random(in: 0...100)
+            rightOperand = Int.random(in: 0...(100 - leftOperand))
+        }
     }
 }

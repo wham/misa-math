@@ -33,7 +33,7 @@ struct ContentView: View {
                         Text("÷ Division")
                     }
                 }.listStyle(GroupedListStyle())
-                NavigationLink(destination: MathFormulaView()) {
+                NavigationLink(destination: MathFormulaView(mathFormula: MathFormula(addition: addition, subtraction: subtraction, multiplication: multiplication, division: division))) {
                     Text("Start")
                 }.buttonStyle(DefaultButtonStyle())
             }
@@ -44,6 +44,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(MathFormula())
     }
 }

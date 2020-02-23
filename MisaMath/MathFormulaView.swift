@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct MathFormulaView: View {
-    @EnvironmentObject var mathFormula: MathFormula
+    var mathFormula: MathFormula
     @State var result = ""
     
     var body: some View {
@@ -29,7 +29,7 @@ struct MathFormulaView: View {
         
         return HStack() {
             Text(String(mathFormula.leftOperand))
-            Text("+")
+            Text(String(mathFormula.operation))
             Text(String(mathFormula.rightOperand))
             Text("=")
             TextField("??", text: binding)
@@ -44,7 +44,6 @@ struct MathFormulaView: View {
 
 struct MathFormulaView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-            .environmentObject(MathFormula())
+        MathFormulaView(mathFormula: MathFormula(addition: true, subtraction: false, multiplication: false, division: false))
     }
 }
