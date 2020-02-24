@@ -38,7 +38,7 @@ struct MathFormulaView: View {
                 .foregroundColor(mathFormula.expectedResult == Int(result) ? .green : .red)
             
         }
-        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+        .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
     }
 }
 
