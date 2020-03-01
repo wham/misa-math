@@ -27,18 +27,22 @@ struct MathFormulaView: View {
             }
         })
         
-        return HStack() {
-            Text(String(mathFormula.leftOperand))
-            Text(String(mathFormula.operation))
-            Text(String(mathFormula.rightOperand))
-            Text("=")
-            TextField("??", text: binding)
-                .keyboardType(/*@START_MENU_TOKEN@*/.numberPad/*@END_MENU_TOKEN@*/)
-                .frame(width: 60)
-                .foregroundColor(mathFormula.expectedResult == Int(result) ? .green : .red)
+        return VStack() {
+            HStack() {
+                Text(String(mathFormula.leftOperand))
+                Text(String(mathFormula.operation))
+                Text(String(mathFormula.rightOperand))
+                Text("=")
+                TextField("??", text: binding)
+                    .keyboardType(/*@START_MENU_TOKEN@*/.numberPad/*@END_MENU_TOKEN@*/)
+                    .frame(width: 80)
+                    .foregroundColor(mathFormula.expectedResult == Int(result) ? .green : .red)
             
+            }
+            .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
+            Spacer()
         }
-        .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
+        .padding(.all)
     }
 }
 

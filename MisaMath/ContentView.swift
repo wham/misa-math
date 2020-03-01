@@ -37,7 +37,7 @@ struct ContentView: View {
                 
             }
             .padding(.all)
-            .navigationBarTitle("Settings")
+            .navigationBarTitle("Tasks")
         }
     }
 }
