@@ -16,28 +16,28 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(spacing: 10.0) {
                 Image("Logo")
                     .frame(width: 200, height: 200)
-                List {
-                    Toggle(isOn: $addition) {
-                        Text("+ Addition")
-                    }
-                    Toggle(isOn: $subtraction) {
-                        Text("- Subtraction")
-                    }
-                    Toggle(isOn: $multiplication) {
-                        Text("× Multiplication")
-                    }
-                    Toggle(isOn: $division) {
-                        Text("÷ Division")
-                    }
-                }.listStyle(GroupedListStyle())
+                Toggle(isOn: $addition) {
+                    Text("+ Addition")
+                }
+                Toggle(isOn: $subtraction) {
+                    Text("- Subtraction")
+                }
+                Toggle(isOn: $multiplication) {
+                    Text("× Multiplication")
+                }
+                Toggle(isOn: $division) {
+                    Text("÷ Division")
+                }
                 NavigationLink(destination: MathFormulaView(mathFormula: MathFormula(addition: addition, subtraction: subtraction, multiplication: multiplication, division: division))) {
                     Text("Start")
                 }.buttonStyle(DefaultButtonStyle())
+                
             }
-        }
+            .padding(.all)
+            }
     }
 }
 
