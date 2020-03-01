@@ -17,6 +17,12 @@
 		E96A324823EFC13100701303 /* MisaMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A324723EFC13100701303 /* MisaMathTests.swift */; };
 		E96A325323EFC13100701303 /* MisaMathUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A325223EFC13100701303 /* MisaMathUITests.swift */; };
 		E96A326323F119A700701303 /* MathFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A326223F119A700701303 /* MathFormula.swift */; };
+		E96F3E37240B4E6700E7D83F /* AppCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96F3E36240B4E6700E7D83F /* AppCenter.framework */; };
+		E96F3E38240B4E6700E7D83F /* AppCenter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E96F3E36240B4E6700E7D83F /* AppCenter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E96F3E3B240B4E6F00E7D83F /* AppCenterAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96F3E3A240B4E6F00E7D83F /* AppCenterAnalytics.framework */; };
+		E96F3E3C240B4E6F00E7D83F /* AppCenterAnalytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E96F3E3A240B4E6F00E7D83F /* AppCenterAnalytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E96F3E3E240B4E7300E7D83F /* AppCenterCrashes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96F3E3D240B4E7300E7D83F /* AppCenterCrashes.framework */; };
+		E96F3E3F240B4E7300E7D83F /* AppCenterCrashes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E96F3E3D240B4E7300E7D83F /* AppCenterCrashes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E96F3E39240B4E6700E7D83F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E96F3E3C240B4E6F00E7D83F /* AppCenterAnalytics.framework in Embed Frameworks */,
+				E96F3E38240B4E6700E7D83F /* AppCenter.framework in Embed Frameworks */,
+				E96F3E3F240B4E7300E7D83F /* AppCenterCrashes.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		E934777E23FB93FB00876D1E /* MathFormulaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathFormulaView.swift; sourceTree = "<group>"; };
 		E96A322D23EFC13000701303 /* MisaMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MisaMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +75,9 @@
 		E96A325223EFC13100701303 /* MisaMathUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisaMathUITests.swift; sourceTree = "<group>"; };
 		E96A325423EFC13100701303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E96A326223F119A700701303 /* MathFormula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathFormula.swift; sourceTree = "<group>"; };
+		E96F3E36240B4E6700E7D83F /* AppCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenter.framework; path = Carthage/Build/iOS/AppCenter.framework; sourceTree = "<group>"; };
+		E96F3E3A240B4E6F00E7D83F /* AppCenterAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterAnalytics.framework; path = Carthage/Build/iOS/AppCenterAnalytics.framework; sourceTree = "<group>"; };
+		E96F3E3D240B4E7300E7D83F /* AppCenterCrashes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterCrashes.framework; path = Carthage/Build/iOS/AppCenterCrashes.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +85,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E96F3E3B240B4E6F00E7D83F /* AppCenterAnalytics.framework in Frameworks */,
+				E96F3E37240B4E6700E7D83F /* AppCenter.framework in Frameworks */,
+				E96F3E3E240B4E7300E7D83F /* AppCenterCrashes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +115,7 @@
 				E96A324623EFC13100701303 /* MisaMathTests */,
 				E96A325123EFC13100701303 /* MisaMathUITests */,
 				E96A322E23EFC13000701303 /* Products */,
+				E96F3E35240B4E6700E7D83F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +171,16 @@
 			path = MisaMathUITests;
 			sourceTree = "<group>";
 		};
+		E96F3E35240B4E6700E7D83F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E96F3E3D240B4E7300E7D83F /* AppCenterCrashes.framework */,
+				E96F3E3A240B4E6F00E7D83F /* AppCenterAnalytics.framework */,
+				E96F3E36240B4E6700E7D83F /* AppCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +191,7 @@
 				E96A322923EFC13000701303 /* Sources */,
 				E96A322A23EFC13000701303 /* Frameworks */,
 				E96A322B23EFC13000701303 /* Resources */,
+				E96F3E39240B4E6700E7D83F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -446,6 +486,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MisaMath/Preview Content\"";
 				DEVELOPMENT_TEAM = U5DMD247UW;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MisaMath/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -466,6 +510,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MisaMath/Preview Content\"";
 				DEVELOPMENT_TEAM = U5DMD247UW;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MisaMath/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
