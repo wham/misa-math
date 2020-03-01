@@ -17,8 +17,6 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 10.0) {
-                Image("Logo")
-                    .frame(width: 200, height: 200)
                 Toggle(isOn: $addition) {
                     Text("+ Addition")
                 }
@@ -34,10 +32,12 @@ struct ContentView: View {
                 NavigationLink(destination: MathFormulaView(mathFormula: MathFormula(addition: addition, subtraction: subtraction, multiplication: multiplication, division: division))) {
                     Text("Start")
                 }.buttonStyle(DefaultButtonStyle())
+                Spacer()
                 
             }
             .padding(.all)
-            }
+            .navigationBarTitle("Start")
+        }
     }
 }
 
