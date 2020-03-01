@@ -31,12 +31,13 @@ struct ContentView: View {
                 }
                 NavigationLink(destination: MathFormulaView(mathFormula: MathFormula(addition: addition, subtraction: subtraction, multiplication: multiplication, division: division))) {
                     Text("Start")
+                        .font(.title)
                 }.buttonStyle(DefaultButtonStyle())
                 Spacer()
                 
             }
             .padding(.all)
-            .navigationBarTitle("Start")
+            .navigationBarTitle("Settings")
         }
     }
 }
