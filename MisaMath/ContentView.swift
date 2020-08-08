@@ -17,17 +17,29 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 10.0) {
-                Toggle(isOn: $addition) {
-                    Text("+ Addition")
+                HStack {
+                    Image("Addition").resizable().frame(width: 30, height: 30)
+                    Toggle(isOn: $addition) {
+                        Text("Addition")
+                    }
                 }
-                Toggle(isOn: $subtraction) {
-                    Text("- Subtraction")
+                HStack {
+                    Image("Subtraction").resizable().frame(width: 30, height: 30)
+                    Toggle(isOn: $subtraction) {
+                        Text("Subtraction")
+                    }
                 }
-                Toggle(isOn: $multiplication) {
-                    Text("× Multiplication")
+                HStack {
+                    Image("Multiplication").resizable().frame(width: 30, height: 30)
+                    Toggle(isOn: $multiplication) {
+                        Text("Multiplication")
+                    }
                 }
-                Toggle(isOn: $division) {
-                    Text("÷ Division")
+                HStack {
+                    Image("Division").resizable().frame(width: 30, height: 30)
+                    Toggle(isOn: $division) {
+                        Text("Division")
+                    }
                 }
                 NavigationLink(destination: MathFormulaView(mathFormula: MathFormula(addition: addition, subtraction: subtraction, multiplication: multiplication, division: division))) {
                     Text("Start")
