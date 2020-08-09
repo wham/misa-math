@@ -54,7 +54,7 @@
 
 /* Begin PBXFileReference section */
 		E934777E23FB93FB00876D1E /* MathFormulaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathFormulaView.swift; sourceTree = "<group>"; };
-		E96A322D23EFC13000701303 /* MisaMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MisaMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E96A322D23EFC13000701303 /* Misa Math.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Misa Math.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96A323023EFC13000701303 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E96A323223EFC13000701303 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E96A323423EFC13000701303 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 		E96A322E23EFC13000701303 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E96A322D23EFC13000701303 /* MisaMath.app */,
+				E96A322D23EFC13000701303 /* Misa Math.app */,
 				E96A324323EFC13100701303 /* MisaMathTests.xctest */,
 				E96A324E23EFC13100701303 /* MisaMathUITests.xctest */,
 			);
@@ -193,7 +193,7 @@
 			);
 			name = MisaMath;
 			productName = MisaMath;
-			productReference = E96A322D23EFC13000701303 /* MisaMath.app */;
+			productReference = E96A322D23EFC13000701303 /* Misa Math.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E96A324223EFC13100701303 /* MisaMathTests */ = {
@@ -490,7 +490,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = codes.vesely.MisaMath;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Misa Math";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -514,7 +514,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = codes.vesely.MisaMath;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Misa Math";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
