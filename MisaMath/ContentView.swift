@@ -49,7 +49,7 @@ struct ContentView: View {
                 
             }
             .padding(.all)
-            .navigationBarTitle("Tasks")
+            .navigationBarTitle("Operations")
         }
     }
 }
