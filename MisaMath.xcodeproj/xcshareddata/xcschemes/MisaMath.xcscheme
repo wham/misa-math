@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E96A322C23EFC13000701303"
-               BuildableName = "MisaMath.app"
+               BuildableName = "Misa Math.app"
                BlueprintName = "MisaMath"
                ReferencedContainer = "container:MisaMath.xcodeproj">
             </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E96A322C23EFC13000701303"
-            BuildableName = "MisaMath.app"
+            BuildableName = "Misa Math.app"
             BlueprintName = "MisaMath"
             ReferencedContainer = "container:MisaMath.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E96A322C23EFC13000701303"
-            BuildableName = "MisaMath.app"
+            BuildableName = "Misa Math.app"
             BlueprintName = "MisaMath"
             ReferencedContainer = "container:MisaMath.xcodeproj">
          </BuildableReference>
