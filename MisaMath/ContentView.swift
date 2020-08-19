@@ -13,6 +13,7 @@ struct ContentView: View {
     @State private var subtraction = true;
     @State private var multiplication = true;
     @State private var division = true;
+    @State private var difficulty = 0.0;
     
     var body: some View {
         NavigationView {
@@ -40,6 +41,15 @@ struct ContentView: View {
                     Toggle(isOn: $division) {
                         Text("Division")
                     }
+                }
+                HStack {
+                    Text("Easy")
+                    Slider(value: $difficulty, in: 0...3, step: 1)
+                    Text("Hard")
+                }.padding(.top)
+                HStack {
+                    Text("Example:")
+                    Text("34 + 56")
                 }
                 NavigationLink(destination: MathFormulaView(mathFormula: MathFormula(addition: addition, subtraction: subtraction, multiplication: multiplication, division: division))) {
                     Text("Start")
