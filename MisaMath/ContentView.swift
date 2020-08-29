@@ -48,9 +48,14 @@ struct ContentView: View {
                     Text("Hard")
                 }.padding(.top)
                 HStack {
-                    Text("Example:")
+                    Text("Examples:")
                     Text("34 + 56")
-                }
+                    Text("7 - 5")
+                    Text("3 x 5")
+                    Text("12 / 7")
+                    Text("100 - 2")
+                    Spacer()
+                }.foregroundColor(.gray).font(.system(size: 10)).padding(.bottom)
                 NavigationLink(destination: MathFormulaView(mathFormula: MathFormula(addition: addition, subtraction: subtraction, multiplication: multiplication, division: division))) {
                     Text("Start")
                         .font(.title)
