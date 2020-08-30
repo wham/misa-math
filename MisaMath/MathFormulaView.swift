@@ -63,6 +63,6 @@ struct MathFormulaView: View {
 
 struct MathFormulaView_Previews: PreviewProvider {
     static var previews: some View {
-        MathFormulaView(mathFormula: MathFormula(addition: true, subtraction: false, multiplication: false, division: false))
+        MathFormulaView(mathFormula: MathFormula(addition: true, subtraction: false, multiplication: false, division: false, difficulty: 2))
     }
 }
