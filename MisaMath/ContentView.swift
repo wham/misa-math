@@ -13,9 +13,12 @@ struct ContentView: View {
     @State private var subtraction = true;
     @State private var multiplication = true;
     @State private var division = true;
+    @State private var difficulty = 0.0;
     
     var body: some View {
-        NavigationView {
+        let mathFormula = MathFormula(addition: addition, subtraction: subtraction, multiplication: multiplication, division: division, difficulty: difficulty)
+        
+        return NavigationView {
             VStack(spacing: 10.0) {
                 HStack {
                     Image("Addition").resizable().frame(width: 30, height: 30)
@@ -41,7 +44,17 @@ struct ContentView: View {
                         Text("Division")
                     }
                 }
-                NavigationLink(destination: MathFormulaView(mathFormula: MathFormula(addition: addition, subtraction: subtraction, multiplication: multiplication, division: division))) {
+                HStack {
+                    Text("Easy")
+                    Slider(value: $difficulty, in: 0...2, step: 1)
+                    Text("Hard")
+                }.padding(.top)
+                HStack {
+                    Text("Example:")
+                    Text(String(mathFormula.leftOperand) + " " + mathFormula.operation + " " + String(mathFormula.rightOperand))
+                    Spacer()
+                }.foregroundColor(.gray).font(.system(size: 10)).padding(.bottom)
+                NavigationLink(destination: MathFormulaView(mathFormula: mathFormula)) {
                     Text("Start")
                         .font(.title)
                 }.buttonStyle(DefaultButtonStyle())
