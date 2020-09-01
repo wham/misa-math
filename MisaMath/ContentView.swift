@@ -16,7 +16,19 @@ struct ContentView: View {
     @State private var difficulty = 0.0;
     
     var body: some View {
-        let mathFormula = MathFormula(addition: addition, subtraction: subtraction, multiplication: multiplication, division: division, difficulty: difficulty)
+        var difficultyEnum: Difficulty = .easy
+        
+        if (difficulty == 1) {
+            difficultyEnum = .medium
+        }
+        
+        if (difficulty == 2) {
+            difficultyEnum = .hard
+        }
+        
+        let mathFormulaGenerator = MathFormulaGenerator(addition: addition, subtraction: subtraction, multiplication: multiplication, division: division, difficulty: difficultyEnum)
+        
+        let mathFormulaExample1 = mathFormulaGenerator.generate()
         
         return NavigationView {
             VStack(spacing: 10.0) {
@@ -51,10 +63,10 @@ struct ContentView: View {
                 }.padding(.top)
                 HStack {
                     Text("Example:")
-                    Text(String(mathFormula.leftOperand) + " " + mathFormula.operation + " " + String(mathFormula.rightOperand))
+                    Text(String(mathFormulaExample1.leftOperand) + " " + mathFormulaExample1.operation + " " + String(mathFormulaExample1.rightOperand))
                     Spacer()
                 }.foregroundColor(.gray).font(.system(size: 10)).padding(.bottom)
-                NavigationLink(destination: MathFormulaView(mathFormula: mathFormula)) {
+                NavigationLink(destination: MathFormulaView(mathFormulaGenerator: mathFormulaGenerator)) {
                     Text("Start")
                         .font(.title)
                 }.buttonStyle(DefaultButtonStyle())
