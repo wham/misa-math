@@ -1,6 +1,6 @@
-enum MathOperation {
-    case addition
-    case subtraction
-    case multiplication
-    case division
+enum MathOperation: Character {
+    case addition = "+"
+    case subtraction = "-"
+    case multiplication = "x"
+    case division = "/"
 }
