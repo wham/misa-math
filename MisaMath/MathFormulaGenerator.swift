@@ -49,7 +49,7 @@ class MathFormulaGenerator {
                 leftOperand = Int.random(in: 0...5)
                 rightOperand = Int.random(in: 0...5)
             case .division:
-                rightOperand = Int.random(in: 0...5)
+                rightOperand = Int.random(in: 1...5)
                 leftOperand = rightOperand * Int.random(in: 0...5)
             }
         case .medium:
@@ -64,7 +64,7 @@ class MathFormulaGenerator {
                 leftOperand = Int.random(in: 0...10)
                 rightOperand = Int.random(in: 0...10)
             case .division:
-                rightOperand = Int.random(in: 0...10)
+                rightOperand = Int.random(in: 1...10)
                 leftOperand = rightOperand * Int.random(in: 0...10)
             }
         case .hard:
@@ -79,7 +79,7 @@ class MathFormulaGenerator {
                 leftOperand = Int.random(in: 0...20)
                 rightOperand = Int.random(in: 0...20)
             case .division:
-                rightOperand = Int.random(in: 0...20)
+                rightOperand = Int.random(in: 1...20)
                 leftOperand = rightOperand * Int.random(in: 0...20)
             }
         }

@@ -41,7 +41,7 @@ struct MathFormulaView: View {
         return VStack() {
             HStack() {
                 Text(String(mathFormula.leftOperand))
-                Text("?")
+                Text(mathFormula.operation.toPrettyString())
                 Text(String(mathFormula.rightOperand))
                 Text("=")
                 TextField("??", text: binding)
