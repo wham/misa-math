@@ -63,7 +63,7 @@ struct ContentView: View {
                 }.padding(.top)
                 HStack {
                     Text("Example:")
-                    Text(String(mathFormulaExample1.leftOperand) + " " + "?" + " " + String(mathFormulaExample1.rightOperand))
+                    Text(String(mathFormulaExample1.leftOperand) + " ? " + String(mathFormulaExample1.rightOperand))
                     Spacer()
                 }.foregroundColor(.gray).font(.system(size: 10)).padding(.bottom)
                 NavigationLink(destination: MathFormulaView(mathFormulaGenerator: mathFormulaGenerator, mathFormula: mathFormulaGenerator.generate())) {
