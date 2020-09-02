@@ -9,7 +9,8 @@
 import SwiftUI
 
 struct MathFormulaView: View {
-    var mathFormula: MathFormula
+    var mathFormulaGenerator: MathFormulaGenerator
+    @State var mathFormula: MathFormula
     @State var result = ""
     @State var numberOfCorrectFormulas = 0
     @State var numberOfIncorrectFormulas = 0
@@ -21,17 +22,17 @@ struct MathFormulaView: View {
         }, set: {
             self.result = $0
             
-            if (Int(self.result) == self.mathFormula.expectedResult) {
+            if (Int(self.result) == self.mathFormula.result) {
                 if (!self.isCounted) {
                     self.numberOfCorrectFormulas = self.numberOfCorrectFormulas + 1
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                     // Put your code which should be executed with a delay here
-                    self.mathFormula.generate()
+                    self.mathFormula = self.mathFormulaGenerator.generate()
                     self.result = ""
                     self.isCounted = false
                 }
-            } else if (!self.isCounted && String(self.result).count >= String(self.mathFormula.expectedResult).count) {
+            } else if (!self.isCounted && String(self.result).count >= String(self.mathFormula.result).count) {
                 self.numberOfIncorrectFormulas = self.numberOfIncorrectFormulas + 1
                 self.isCounted = true
             }
@@ -40,13 +41,13 @@ struct MathFormulaView: View {
         return VStack() {
             HStack() {
                 Text(String(mathFormula.leftOperand))
-                Text(String(mathFormula.operation))
+                Text(mathFormula.operation.toPrettyString())
                 Text(String(mathFormula.rightOperand))
                 Text("=")
                 TextField("??", text: binding)
                     .keyboardType(/*@START_MENU_TOKEN@*/.numberPad/*@END_MENU_TOKEN@*/)
                     .frame(width: 80)
-                    .foregroundColor(mathFormula.expectedResult == Int(result) ? .green : (String(self.result).count >= String(self.mathFormula.expectedResult).count ? .red : .primary))
+                    .foregroundColor(mathFormula.result == Int(result) ? .green : (String(self.result).count >= String(self.mathFormula.result).count ? .red : .primary))
             
             }
             .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
@@ -63,6 +64,6 @@ struct MathFormulaView: View {
 
 struct MathFormulaView_Previews: PreviewProvider {
     static var previews: some View {
-        MathFormulaView(mathFormula: MathFormula(addition: true, subtraction: false, multiplication: false, division: false, difficulty: 2))
+        MathFormulaView(mathFormulaGenerator: MathFormulaGenerator(addition: true, subtraction: false, multiplication: false, division: false, difficulty: .medium), mathFormula: MathFormulaGenerator(addition: true, subtraction: false, multiplication: false, division: false, difficulty: .medium).generate())
     }
 }
