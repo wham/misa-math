@@ -29,6 +29,9 @@ struct ContentView: View {
         let mathFormulaGenerator = MathFormulaGenerator(addition: addition, subtraction: subtraction, multiplication: multiplication, division: division, difficulty: difficultyEnum)
         
         let mathFormulaExample1 = mathFormulaGenerator.generate()
+        let mathFormulaExample2 = mathFormulaGenerator.generate()
+        let mathFormulaExample3 = mathFormulaGenerator.generate()
+        let mathFormulaExample4 = mathFormulaGenerator.generate()
         
         return NavigationView {
             VStack(spacing: 10.0) {
@@ -62,8 +65,11 @@ struct ContentView: View {
                     Text("Hard")
                 }.padding(.top)
                 HStack {
-                    Text("Example:")
-                    Text(String(mathFormulaExample1.leftOperand) + " " + mathFormulaExample1.operation.toPrettyString() + " " + String(mathFormulaExample1.rightOperand))
+                    Text("Examples:")
+                    ExampleView(mathFormula: mathFormulaExample1)
+                    ExampleView(mathFormula: mathFormulaExample2)
+                    ExampleView(mathFormula: mathFormulaExample3)
+                    ExampleView(mathFormula: mathFormulaExample4)
                     Spacer()
                 }.foregroundColor(.gray).font(.system(size: 10)).padding(.bottom)
                 NavigationLink(destination: MathFormulaView(mathFormulaGenerator: mathFormulaGenerator, mathFormula: mathFormulaGenerator.generate())) {
