@@ -39,25 +39,25 @@ struct ContentView: View {
                     Image("Addition").resizable().frame(width: 30, height: 30)
                     Toggle(isOn: $addition) {
                         Text("Addition")
-                    }
+                    }.disabled(!subtraction && !multiplication && !division)
                 }
                 HStack {
                     Image("Subtraction").resizable().frame(width: 30, height: 30)
                     Toggle(isOn: $subtraction) {
                         Text("Subtraction")
-                    }
+                    }.disabled(!addition && !multiplication && !division)
                 }
                 HStack {
                     Image("Multiplication").resizable().frame(width: 30, height: 30)
                     Toggle(isOn: $multiplication) {
                         Text("Multiplication")
-                    }
+                    }.disabled(!addition && !subtraction && !division)
                 }
                 HStack {
                     Image("Division").resizable().frame(width: 30, height: 30)
                     Toggle(isOn: $division) {
                         Text("Division")
-                    }
+                    }.disabled(!addition && !subtraction && !multiplication)
                 }
                 HStack {
                     Text("Easy")
