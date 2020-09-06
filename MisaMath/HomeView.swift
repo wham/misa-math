@@ -1,14 +1,6 @@
-//
-//  ContentView.swift
-//  MisaMath
-//
-//  Created by Tomáš Veselý on 2/8/20.
-//  Copyright © 2020 Tomáš Veselý. All rights reserved.
-//
-
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     @State private var addition = true;
     @State private var subtraction = true;
     @State private var multiplication = true;
@@ -85,8 +77,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
     }
 }
