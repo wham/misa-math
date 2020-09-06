@@ -10,7 +10,7 @@
 		E934777F23FB93FB00876D1E /* MathFormulaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934777E23FB93FB00876D1E /* MathFormulaView.swift */; };
 		E96A323123EFC13000701303 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A323023EFC13000701303 /* AppDelegate.swift */; };
 		E96A323323EFC13000701303 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A323223EFC13000701303 /* SceneDelegate.swift */; };
-		E96A323523EFC13000701303 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A323423EFC13000701303 /* ContentView.swift */; };
+		E96A323523EFC13000701303 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A323423EFC13000701303 /* HomeView.swift */; };
 		E96A323723EFC13100701303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E96A323623EFC13100701303 /* Assets.xcassets */; };
 		E96A323A23EFC13100701303 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E96A323923EFC13100701303 /* Preview Assets.xcassets */; };
 		E96A323D23EFC13100701303 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E96A323B23EFC13100701303 /* LaunchScreen.storyboard */; };
@@ -61,7 +61,7 @@
 		E96A322D23EFC13000701303 /* Misa Math.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Misa Math.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96A323023EFC13000701303 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E96A323223EFC13000701303 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E96A323423EFC13000701303 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E96A323423EFC13000701303 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E96A323623EFC13100701303 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E96A323923EFC13100701303 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E96A323C23EFC13100701303 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 			children = (
 				E96A323023EFC13000701303 /* AppDelegate.swift */,
 				E96A323223EFC13000701303 /* SceneDelegate.swift */,
-				E96A323423EFC13000701303 /* ContentView.swift */,
+				E96A323423EFC13000701303 /* HomeView.swift */,
 				E96A323623EFC13100701303 /* Assets.xcassets */,
 				E96A323B23EFC13100701303 /* LaunchScreen.storyboard */,
 				E96A323E23EFC13100701303 /* Info.plist */,
@@ -327,7 +327,7 @@
 				E9BEA5DC2500C0E1006BB7F8 /* ExampleView.swift in Sources */,
 				E97F8B2924FCB8C3003D665E /* MathFormulaGenerator.swift in Sources */,
 				E97F8B2D24FCBFD4003D665E /* Difficulty.swift in Sources */,
-				E96A323523EFC13000701303 /* ContentView.swift in Sources */,
+				E96A323523EFC13000701303 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
