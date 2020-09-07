@@ -67,8 +67,6 @@ struct NewTestView: View {
                 Text("Start")
                     .font(.title)
             }.buttonStyle(DefaultButtonStyle())
-            Spacer()
-            
         }
         .padding(.all)
     }
