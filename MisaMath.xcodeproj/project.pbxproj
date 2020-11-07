@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9046D432556774E0062DBB3 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9046D422556774E0062DBB3 /* Results.swift */; };
 		E934777F23FB93FB00876D1E /* MathFormulaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934777E23FB93FB00876D1E /* MathFormulaView.swift */; };
 		E96A323123EFC13000701303 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A323023EFC13000701303 /* AppDelegate.swift */; };
 		E96A323323EFC13000701303 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A323223EFC13000701303 /* SceneDelegate.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E9046D422556774E0062DBB3 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		E934777E23FB93FB00876D1E /* MathFormulaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathFormulaView.swift; sourceTree = "<group>"; };
 		E96A322D23EFC13000701303 /* Misa Math.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Misa Math.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96A323023EFC13000701303 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				E9BEA5DB2500C0E1006BB7F8 /* ExampleView.swift */,
 				E9BEA5E32505F889006BB7F8 /* NewTestView.swift */,
 				E9BEA5E525060062006BB7F8 /* ResultsView.swift */,
+				E9046D422556774E0062DBB3 /* Results.swift */,
 			);
 			path = MisaMath;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				E96A323123EFC13000701303 /* AppDelegate.swift in Sources */,
 				E96A323323EFC13000701303 /* SceneDelegate.swift in Sources */,
 				E9BEA5E625060062006BB7F8 /* ResultsView.swift in Sources */,
+				E9046D432556774E0062DBB3 /* Results.swift in Sources */,
 				E9BEA5DC2500C0E1006BB7F8 /* ExampleView.swift in Sources */,
 				E97F8B2924FCB8C3003D665E /* MathFormulaGenerator.swift in Sources */,
 				E9BEA5E42505F889006BB7F8 /* NewTestView.swift in Sources */,

@@ -1,11 +1,12 @@
 import SwiftUI
 
 struct NewTestView: View {
-    @State private var addition = true;
-    @State private var subtraction = true;
-    @State private var multiplication = true;
-    @State private var division = true;
-    @State private var difficulty = 0.0;
+    var results: Results
+    @State private var addition = true
+    @State private var subtraction = true
+    @State private var multiplication = true
+    @State private var division = true
+    @State private var difficulty = 0.0
     
     var body: some View {
         var difficultyEnum: Difficulty = .easy
@@ -63,7 +64,7 @@ struct NewTestView: View {
                 ExampleView(mathFormula: mathFormulaExample4)
                 Spacer()
             }.foregroundColor(.gray).font(.system(size: 10)).padding(.bottom)
-            NavigationLink(destination: MathFormulaView(mathFormulaGenerator: mathFormulaGenerator, mathFormula: mathFormulaGenerator.generate())) {
+            NavigationLink(destination: MathFormulaView(mathFormulaGenerator: mathFormulaGenerator, results: results, mathFormula: mathFormulaGenerator.generate())) {
                 Text("Start")
                     .font(.title)
             }.buttonStyle(DefaultButtonStyle())
@@ -74,6 +75,6 @@ struct NewTestView: View {
 
 struct NewTestView_Previews: PreviewProvider {
     static var previews: some View {
-        NewTestView()
+        NewTestView(results: Results())
     }
 }

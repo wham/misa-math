@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct HomeView: View {
+    var results = Results()
+    
     var body: some View {
         return NavigationView {
             VStack {
@@ -8,12 +10,12 @@ struct HomeView: View {
                     Text("New Test").font(.title)
                     Spacer()
                 }
-                NewTestView()
+                NewTestView(results: results)
                 HStack {
                     Text("Results").font(.title)
                     Spacer()
                 }
-                ResultsView()
+                ResultsView(results: results)
                 Spacer()
             }.navigationBarTitle("Home")
         }

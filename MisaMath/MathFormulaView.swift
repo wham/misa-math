@@ -10,6 +10,7 @@ import SwiftUI
 
 struct MathFormulaView: View {
     var mathFormulaGenerator: MathFormulaGenerator
+    var results: Results
     @State var mathFormula: MathFormula
     @State var result = ""
     @State var numberOfCorrectFormulas = 0
@@ -25,6 +26,7 @@ struct MathFormulaView: View {
             if (Int(self.result) == self.mathFormula.result) {
                 if (!self.isCounted) {
                     self.numberOfCorrectFormulas = self.numberOfCorrectFormulas + 1
+                    self.results.easyCorrect = self.results.easyCorrect + 1
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                     // Put your code which should be executed with a delay here
@@ -64,6 +66,6 @@ struct MathFormulaView: View {
 
 struct MathFormulaView_Previews: PreviewProvider {
     static var previews: some View {
-        MathFormulaView(mathFormulaGenerator: MathFormulaGenerator(addition: true, subtraction: false, multiplication: false, division: false, difficulty: .medium), mathFormula: MathFormulaGenerator(addition: true, subtraction: false, multiplication: false, division: false, difficulty: .medium).generate())
+        MathFormulaView(mathFormulaGenerator: MathFormulaGenerator(addition: true, subtraction: false, multiplication: false, division: false, difficulty: .medium), results: Results(), mathFormula: MathFormulaGenerator(addition: true, subtraction: false, multiplication: false, division: false, difficulty: .medium).generate())
     }
 }

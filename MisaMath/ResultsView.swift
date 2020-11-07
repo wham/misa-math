@@ -1,12 +1,14 @@
 import SwiftUI
 
 struct ResultsView: View {
+    @ObservedObject var results: Results
+    
     var body: some View {
         VStack {
             HStack {
                 Text("Easy:")
                 Spacer()
-                Text("12")
+                Text(String(results.easyCorrect))
                 Text("/")
                 Text("4")
             }
@@ -30,6 +32,6 @@ struct ResultsView: View {
 
 struct ResultsView_Previews: PreviewProvider {
     static var previews: some View {
-        ResultsView()
+        ResultsView(results: Results())
     }
 }
