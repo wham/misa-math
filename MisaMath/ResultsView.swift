@@ -8,23 +8,23 @@ struct ResultsView: View {
             HStack {
                 Text("Easy:")
                 Spacer()
-                Text(String(results.easyCorrect))
+                Text(String(results.easyCorrect)).foregroundColor(.green)
                 Text("/")
-                Text(String(results.easyIncorrect))
+                Text(String(results.easyIncorrect)).foregroundColor(.red)
             }
             HStack {
                 Text("Medium:")
                 Spacer()
-                Text(String(results.mediumCorrect))
+                Text(String(results.mediumCorrect)).foregroundColor(.green)
                 Text("/")
-                Text(String(results.mediumIncorrect))
+                Text(String(results.mediumIncorrect)).foregroundColor(.red)
             }
             HStack {
                 Text("Hard:")
                 Spacer()
-                Text(String(results.hardCorrect))
+                Text(String(results.hardCorrect)).foregroundColor(.green)
                 Text("/")
-                Text(String(results.hardIncorrect))
+                Text(String(results.hardIncorrect)).foregroundColor(.red)
             }
         }
     }
