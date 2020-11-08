@@ -26,7 +26,7 @@ struct MathFormulaView: View {
             if (Int(self.result) == self.mathFormula.result) {
                 if (!self.isCounted) {
                     self.numberOfCorrectFormulas = self.numberOfCorrectFormulas + 1
-                    self.results.easyCorrect = self.results.easyCorrect + 1
+                    self.results.addCorrect(difficulty: self.mathFormulaGenerator.difficulty)
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                     // Put your code which should be executed with a delay here
@@ -36,6 +36,7 @@ struct MathFormulaView: View {
                 }
             } else if (!self.isCounted && String(self.result).count >= String(self.mathFormula.result).count) {
                 self.numberOfIncorrectFormulas = self.numberOfIncorrectFormulas + 1
+                self.results.addIncorrect(difficulty: self.mathFormulaGenerator.difficulty)
                 self.isCounted = true
             }
         })

@@ -10,21 +10,21 @@ struct ResultsView: View {
                 Spacer()
                 Text(String(results.easyCorrect))
                 Text("/")
-                Text("4")
+                Text(String(results.easyIncorrect))
             }
             HStack {
                 Text("Medium:")
                 Spacer()
-                Text("12")
+                Text(String(results.mediumCorrect))
                 Text("/")
-                Text("4")
+                Text(String(results.mediumIncorrect))
             }
             HStack {
                 Text("Hard:")
                 Spacer()
-                Text("12")
+                Text(String(results.hardCorrect))
                 Text("/")
-                Text("4")
+                Text(String(results.hardIncorrect))
             }
         }
     }
