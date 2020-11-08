@@ -81,4 +81,13 @@ class Results: ObservableObject {
             hardIncorrect += 1
         }
     }
+    
+    func clear() {
+        easyCorrect = 0
+        easyIncorrect = 0
+        mediumCorrect = 0
+        mediumIncorrect = 0
+        hardCorrect = 0
+        hardIncorrect = 0
+    }
 }

@@ -26,6 +26,11 @@ struct ResultsView: View {
                 Text("/")
                 Text(String(results.hardIncorrect)).foregroundColor(.red)
             }
+            Button(action: {
+                self.results.clear()
+            }) {
+                Text("Clear")
+            }
         }
     }
 }
