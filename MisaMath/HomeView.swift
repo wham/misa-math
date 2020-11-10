@@ -5,19 +5,22 @@ struct HomeView: View {
     
     var body: some View {
         return NavigationView {
-            VStack {
-                HStack {
-                    Text("New Test").font(.title)
+            ZStack {
+                Color.background.edgesIgnoringSafeArea(.all)
+                VStack {
+                    HStack {
+                        Text("New Test").font(.title)
+                        Spacer()
+                    }
+                    NewTestView(results: results)
+                    HStack {
+                        Text("Results").font(.title)
+                        Spacer()
+                    }
+                    ResultsView(results: results)
                     Spacer()
-                }
-                NewTestView(results: results)
-                HStack {
-                    Text("Results").font(.title)
-                    Spacer()
-                }
-                ResultsView(results: results)
-                Spacer()
-            }.navigationBarTitle("Home")
+                }.navigationBarTitle("Home")
+            }
         }
     }
 }
