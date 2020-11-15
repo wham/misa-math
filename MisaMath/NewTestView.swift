@@ -26,7 +26,10 @@ struct NewTestView: View {
         let mathFormulaExample3 = mathFormulaGenerator.generate()
         let mathFormulaExample4 = mathFormulaGenerator.generate()
         
-        return VStack(spacing: 10.0) {
+        return ZStack {
+            RoundedRectangle(cornerRadius: 25)
+                            .fill(Color.red)
+            VStack(spacing: 10.0) {
             HStack {
                 Image("Addition").resizable().frame(width: 30, height: 30)
                 Toggle(isOn: $addition) {
@@ -70,6 +73,7 @@ struct NewTestView: View {
             }.buttonStyle(DefaultButtonStyle())
         }
         .padding(.all)
+    }
     }
 }
 
