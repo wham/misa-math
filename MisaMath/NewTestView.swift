@@ -26,9 +26,7 @@ struct NewTestView: View {
         let mathFormulaExample3 = mathFormulaGenerator.generate()
         let mathFormulaExample4 = mathFormulaGenerator.generate()
         
-        return ZStack {
-            RoundedRectangle(cornerRadius: 25)
-                            .fill(Color.red)
+        return
             VStack(spacing: 10.0) {
             HStack {
                 Image("Addition").resizable().frame(width: 30, height: 30)
@@ -72,8 +70,8 @@ struct NewTestView: View {
                     .font(.title)
             }.buttonStyle(DefaultButtonStyle())
         }
-        .padding(.all)
-    }
+            .padding(.all).background(RoundedRectangle(cornerRadius: 5)
+                                    .fill(Color.cardBackground))
     }
 }
 
