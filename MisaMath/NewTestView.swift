@@ -26,8 +26,7 @@ struct NewTestView: View {
         let mathFormulaExample3 = mathFormulaGenerator.generate()
         let mathFormulaExample4 = mathFormulaGenerator.generate()
         
-        return
-            VStack(spacing: 10.0) {
+        return VStack(spacing: 10.0) {
             HStack {
                 Image("Addition").resizable().frame(width: 30, height: 30)
                 Toggle(isOn: $addition) {
@@ -65,12 +64,13 @@ struct NewTestView: View {
                 ExampleView(mathFormula: mathFormulaExample4)
                 Spacer()
             }.foregroundColor(.gray).font(.system(size: 10)).padding(.bottom)
+            Divider()
             NavigationLink(destination: MathFormulaView(mathFormulaGenerator: mathFormulaGenerator, results: results, mathFormula: mathFormulaGenerator.generate())) {
                 Text("Start")
                     .font(.title)
             }.buttonStyle(DefaultButtonStyle())
         }
-            .padding(.all).background(RoundedRectangle(cornerRadius: 5)
+        .padding(.all).background(RoundedRectangle(cornerRadius: 10)
                                     .fill(Color.cardBackground))
     }
 }
@@ -78,5 +78,6 @@ struct NewTestView: View {
 struct NewTestView_Previews: PreviewProvider {
     static var previews: some View {
         NewTestView(results: Results())
+            .preferredColorScheme(.dark)
     }
 }

@@ -12,14 +12,20 @@ struct HomeView: View {
                         Text("New Test").font(.title)
                         Spacer()
                     }
-                    NewTestView(results: results)
+                    NewTestView(results: results).padding(.bottom)
                     HStack {
                         Text("Results").font(.title)
                         Spacer()
+                        Button(action: {
+                            self.results.clear()
+                        }) {
+                            Text("Clear").foregroundColor(.red)
+                            Image(systemName: "trash").foregroundColor(.red)
+                        }
                     }
                     ResultsView(results: results)
                     Spacer()
-                }.navigationBarTitle("Home")
+                }.navigationBarTitle("Home").navigationBarHidden(true).padding(.all)
             }
         }
     }
@@ -28,5 +34,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .preferredColorScheme(.light)
     }
 }
