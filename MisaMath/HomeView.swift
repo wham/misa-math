@@ -1,9 +1,32 @@
 import SwiftUI
 
 struct HomeView: View {
+    var results = Results()
+    
     var body: some View {
         return NavigationView {
-            NewTestView().navigationBarTitle("Home")
+            ZStack {
+                Color.background.edgesIgnoringSafeArea(.all)
+                VStack {
+                    HStack {
+                        Text("New Test").font(.title)
+                        Spacer()
+                    }
+                    NewTestView(results: results).padding(.bottom)
+                    HStack {
+                        Text("Results").font(.title)
+                        Spacer()
+                        Button(action: {
+                            self.results.clear()
+                        }) {
+                            Text("Clear").foregroundColor(.red)
+                            Image(systemName: "trash").foregroundColor(.red)
+                        }
+                    }
+                    ResultsView(results: results)
+                    Spacer()
+                }.navigationBarTitle("Home").navigationBarHidden(true).padding(.all)
+            }
         }
     }
 }
@@ -11,5 +34,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .preferredColorScheme(.light)
     }
 }

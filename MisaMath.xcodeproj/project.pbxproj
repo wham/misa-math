@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9046D432556774E0062DBB3 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9046D422556774E0062DBB3 /* Results.swift */; };
+		E9046D47255A66800062DBB3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9046D46255A66800062DBB3 /* Colors.xcassets */; };
+		E9046D4B255A66F00062DBB3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9046D4A255A66F00062DBB3 /* Colors.swift */; };
 		E934777F23FB93FB00876D1E /* MathFormulaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934777E23FB93FB00876D1E /* MathFormulaView.swift */; };
 		E96A323123EFC13000701303 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A323023EFC13000701303 /* AppDelegate.swift */; };
 		E96A323323EFC13000701303 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A323223EFC13000701303 /* SceneDelegate.swift */; };
@@ -25,6 +28,7 @@
 		E97F8B2D24FCBFD4003D665E /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97F8B2C24FCBFD4003D665E /* Difficulty.swift */; };
 		E9BEA5DC2500C0E1006BB7F8 /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BEA5DB2500C0E1006BB7F8 /* ExampleView.swift */; };
 		E9BEA5E42505F889006BB7F8 /* NewTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BEA5E32505F889006BB7F8 /* NewTestView.swift */; };
+		E9BEA5E625060062006BB7F8 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BEA5E525060062006BB7F8 /* ResultsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E9046D422556774E0062DBB3 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		E9046D46255A66800062DBB3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		E9046D4A255A66F00062DBB3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		E934777E23FB93FB00876D1E /* MathFormulaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathFormulaView.swift; sourceTree = "<group>"; };
 		E96A322D23EFC13000701303 /* Misa Math.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Misa Math.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96A323023EFC13000701303 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +89,7 @@
 		E97F8B2C24FCBFD4003D665E /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
 		E9BEA5DB2500C0E1006BB7F8 /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
 		E9BEA5E32505F889006BB7F8 /* NewTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTestView.swift; sourceTree = "<group>"; };
+		E9BEA5E525060062006BB7F8 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,20 +144,24 @@
 		E96A322F23EFC13000701303 /* MisaMath */ = {
 			isa = PBXGroup;
 			children = (
-				E96A323023EFC13000701303 /* AppDelegate.swift */,
-				E96A323223EFC13000701303 /* SceneDelegate.swift */,
-				E96A323423EFC13000701303 /* HomeView.swift */,
-				E96A323623EFC13100701303 /* Assets.xcassets */,
-				E96A323B23EFC13100701303 /* LaunchScreen.storyboard */,
 				E96A323E23EFC13100701303 /* Info.plist */,
-				E96A323823EFC13100701303 /* Preview Content */,
-				E96A326223F119A700701303 /* MathFormula.swift */,
-				E934777E23FB93FB00876D1E /* MathFormulaView.swift */,
-				E97F8B2824FCB8C3003D665E /* MathFormulaGenerator.swift */,
-				E97F8B2A24FCBAC9003D665E /* MathOperation.swift */,
+				E96A323023EFC13000701303 /* AppDelegate.swift */,
+				E9046D4A255A66F00062DBB3 /* Colors.swift */,
 				E97F8B2C24FCBFD4003D665E /* Difficulty.swift */,
 				E9BEA5DB2500C0E1006BB7F8 /* ExampleView.swift */,
+				E96A323423EFC13000701303 /* HomeView.swift */,
+				E96A326223F119A700701303 /* MathFormula.swift */,
+				E97F8B2824FCB8C3003D665E /* MathFormulaGenerator.swift */,
+				E934777E23FB93FB00876D1E /* MathFormulaView.swift */,
+				E97F8B2A24FCBAC9003D665E /* MathOperation.swift */,
 				E9BEA5E32505F889006BB7F8 /* NewTestView.swift */,
+				E9046D422556774E0062DBB3 /* Results.swift */,
+				E9BEA5E525060062006BB7F8 /* ResultsView.swift */,
+				E96A323223EFC13000701303 /* SceneDelegate.swift */,
+				E96A323623EFC13100701303 /* Assets.xcassets */,
+				E9046D46255A66800062DBB3 /* Colors.xcassets */,
+				E96A323B23EFC13100701303 /* LaunchScreen.storyboard */,
+				E96A323823EFC13100701303 /* Preview Content */,
 			);
 			path = MisaMath;
 			sourceTree = "<group>";
@@ -296,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E96A323D23EFC13100701303 /* LaunchScreen.storyboard in Resources */,
+				E9046D47255A66800062DBB3 /* Colors.xcassets in Resources */,
 				E96A323A23EFC13100701303 /* Preview Assets.xcassets in Resources */,
 				E96A323723EFC13100701303 /* Assets.xcassets in Resources */,
 			);
@@ -327,7 +340,10 @@
 				E96A326323F119A700701303 /* MathFormula.swift in Sources */,
 				E96A323123EFC13000701303 /* AppDelegate.swift in Sources */,
 				E96A323323EFC13000701303 /* SceneDelegate.swift in Sources */,
+				E9BEA5E625060062006BB7F8 /* ResultsView.swift in Sources */,
+				E9046D432556774E0062DBB3 /* Results.swift in Sources */,
 				E9BEA5DC2500C0E1006BB7F8 /* ExampleView.swift in Sources */,
+				E9046D4B255A66F00062DBB3 /* Colors.swift in Sources */,
 				E97F8B2924FCB8C3003D665E /* MathFormulaGenerator.swift in Sources */,
 				E9BEA5E42505F889006BB7F8 /* NewTestView.swift in Sources */,
 				E97F8B2D24FCBFD4003D665E /* Difficulty.swift in Sources */,
