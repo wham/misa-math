@@ -16,6 +16,7 @@ struct MathFormulaView: View {
     @State var numberOfCorrectFormulas = 0
     @State var numberOfIncorrectFormulas = 0
     @State var isCounted = false
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         let binding = Binding<String>(get: {
@@ -58,6 +59,13 @@ struct MathFormulaView: View {
         }
         .padding(.all)
         .navigationBarItems(trailing: HStack() {
+            Button(action: {
+                            self.presentationMode.wrappedValue.dismiss()
+                        }) {
+                            HStack {
+                                Image(systemName: "arrow.left.circle")
+                                Text("Go Back")
+                            }}
             Text(String(numberOfCorrectFormulas)).foregroundColor(.green)
             Text("/")
             Text(String(numberOfIncorrectFormulas)).foregroundColor(.red)
