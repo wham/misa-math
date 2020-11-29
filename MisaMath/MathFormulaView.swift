@@ -1,11 +1,3 @@
-//
-//  MathFormulaView.swift
-//  MisaMath
-//
-//  Created by Tomáš Veselý on 2/17/20.
-//  Copyright © 2020 Tomáš Veselý. All rights reserved.
-//
-
 import SwiftUI
 
 struct MathFormulaView: View {
@@ -52,24 +44,25 @@ struct MathFormulaView: View {
                     .keyboardType(/*@START_MENU_TOKEN@*/.numberPad/*@END_MENU_TOKEN@*/)
                     .frame(width: 80)
                     .foregroundColor(mathFormula.result == Int(result) ? .green : (String(self.result).count >= String(self.mathFormula.result).count ? .red : .primary))
-            
+                
             }
             .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
             Spacer()
         }
         .padding(.all)
-        .navigationBarItems(trailing: HStack() {
-            Button(action: {
-                            self.presentationMode.wrappedValue.dismiss()
-                        }) {
-                            HStack {
-                                Image(systemName: "arrow.left.circle")
-                                Text("Go Back")
-                            }}
-            Text(String(numberOfCorrectFormulas)).foregroundColor(.green)
-            Text("/")
-            Text(String(numberOfIncorrectFormulas)).foregroundColor(.red)
-            }.padding(5))
+        .navigationBarItems(leading: HStack() {
+                                Text(String(numberOfCorrectFormulas)).foregroundColor(.green)
+                                Text("/")
+                                Text(String(numberOfIncorrectFormulas)).foregroundColor(.red)},
+                            trailing: HStack() {
+                                Button(action: {
+                                    self.presentationMode.wrappedValue.dismiss()
+                                }) {
+                                    Text("End").fontWeight(.bold)
+                                }.padding(.horizontal, 10).padding(.vertical, 5).background(Color.red).foregroundColor(Color.white).cornerRadius(5.0)
+                                
+                            }.padding(5))
+        .navigationBarBackButtonHidden(true)
     }
 }
 
