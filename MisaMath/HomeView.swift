@@ -19,7 +19,7 @@ struct HomeView: View {
                         Button(action: {
                             self.results.clear()
                         }) {
-                            Text("Clear").foregroundColor(.red)
+                            Text("Clear").foregroundColor(.red).font(.footnote)
                             Image(systemName: "trash").foregroundColor(.red)
                         }
                     }
