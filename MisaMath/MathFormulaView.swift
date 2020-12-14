@@ -1,4 +1,5 @@
 import SwiftUI
+import PencilKit
 
 struct MathFormulaView: View {
     var mathFormulaGenerator: MathFormulaGenerator
@@ -9,6 +10,7 @@ struct MathFormulaView: View {
     @State var numberOfIncorrectFormulas = 0
     @State var isCounted = false
     @Environment(\.presentationMode) var presentationMode
+    @State private var canvasView = PKCanvasView()
     
     var body: some View {
         let binding = Binding<String>(get: {
@@ -44,9 +46,9 @@ struct MathFormulaView: View {
                     .keyboardType(/*@START_MENU_TOKEN@*/.numberPad/*@END_MENU_TOKEN@*/)
                     .frame(width: 80)
                     .foregroundColor(mathFormula.result == Int(result) ? .green : (String(self.result).count >= String(self.mathFormula.result).count ? .red : .primary))
-                
             }
             .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
+            ResultCanvas(canvasView: $canvasView).border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
             Spacer()
         }
         .padding(.all)
