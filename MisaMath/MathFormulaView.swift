@@ -52,7 +52,9 @@ struct MathFormulaView: View {
             ResultCanvas(canvasView: $canvasView).border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
             Button(action: {
                 let textRecognizer = TextRecognizer()
-                self.recognizedText = textRecognizer.recognizeText(from: canvasView.drawing.im)
+                let image = canvasView.drawing.image(from: canvasView.drawing.bounds, scale: 1.0)
+                self.recognizedText = textRecognizer.recognizeText(from: image.cgImage!) + "foo"
+                UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
             }) {
                 Text("Clear").foregroundColor(.red).font(.footnote)
                 Image(systemName: "trash").foregroundColor(.red)
