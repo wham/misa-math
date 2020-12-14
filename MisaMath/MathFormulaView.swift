@@ -11,6 +11,7 @@ struct MathFormulaView: View {
     @State var isCounted = false
     @Environment(\.presentationMode) var presentationMode
     @State private var canvasView = PKCanvasView()
+    @State var recognizedText = ""
     
     var body: some View {
         let binding = Binding<String>(get: {
@@ -49,6 +50,14 @@ struct MathFormulaView: View {
             }
             .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
             ResultCanvas(canvasView: $canvasView).border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+            Button(action: {
+                let textRecognizer = TextRecognizer()
+                self.recognizedText = textRecognizer.recognizeText(from: canvasView.drawing.im)
+            }) {
+                Text("Clear").foregroundColor(.red).font(.footnote)
+                Image(systemName: "trash").foregroundColor(.red)
+            }
+            Text(recognizedText)
             Spacer()
         }
         .padding(.all)
