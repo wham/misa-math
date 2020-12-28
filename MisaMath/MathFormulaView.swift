@@ -53,13 +53,17 @@ struct MathFormulaView: View {
             Button(action: {
                 let textRecognizer = TextRecognizer()
                 let image = canvasView.drawing.image(from: canvasView.drawing.bounds, scale: 1.0)
-                self.recognizedText = textRecognizer.recognizeText(from: image.cgImage!) + "foo"
-                UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
+                self.recognizedText = ""
+                if let cgImage = image.cgImage {
+                    self.recognizedText = textRecognizer.recognizeText(from: cgImage) + "foo"
+                }
+                // UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
             }) {
                 Text("Clear").foregroundColor(.red).font(.footnote)
                 Image(systemName: "trash").foregroundColor(.red)
             }
             Text(recognizedText)
+            Image(uiImage: canvasView.drawing.image(from: canvasView.drawing.bounds, scale: 1.0))
             Spacer()
         }
         .padding(.all)
